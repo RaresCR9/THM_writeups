@@ -41,8 +41,6 @@ hydra -l lin -P /root/locks.txt ssh://TARGET_IP -t 4
 
 - After we got the password, we connect to the target machine via ssh. After we connected, we see the existence of `user.txt` which gives us the flag.
 
-![alt text](ImagesDuringTheRoom/SSH-1.png)
-
 (Again a new IP because the target machine for some reason was not responding 😁)
 
 ## 3. Privilege Escalation
