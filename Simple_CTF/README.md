@@ -28,7 +28,11 @@ gobuster dir -u http://10.112.128.244 -w /usr/share/wordlists/dirb/small.txt
 
 ![alt text](ImagesDuringRoom/cms.png)
 
-- With this information we search online to see if it has any associated CVE, and we find: CVE-2019-9053, unauthenticated SQL injection vulnerability. We download the exploit and run it with the options -u (telling the url we want to attack) -w (the wordlist we want to use) and --crack. On the AttackBox provided by THM I've encountered an error (see the image below) when running the exploit using python3.
+- With this information we search online to see if it has any associated CVE, and we find: CVE-2019-9053, unauthenticated SQL injection vulnerability. We download the exploit and run it with the options -u (telling the url we want to attack) -w (the wordlist we want to use) and --crack. 
+
+![alt text](ImagesDuringRoom/exploit.png)
+
+- On the AttackBox provided by THM I've encountered an error (see the image below) when running the exploit using python3.
 
 ![alt text](ImagesDuringRoom/eroare.png)
 
