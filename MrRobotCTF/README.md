@@ -49,13 +49,13 @@ and go to: http://10.113.172.33/404.php to start it.
 
 ## 3. Privilege Escalation
 
-- Now we need to get the final flag, which of course needs us to get the root permissions. In the "robot" directory is also a file called: "password.raw-md5". If we cat it we get a name (robot) and a hash. We go to CrackStation to crack the hash we get the password: abcdefghijklmnopqrstuvwxyz. We can try again to log to SSH with the new credentials and we succeed. Now we will try to find the files with SUID or SGID permissions to see if we find something interesting:
+- Now we need to get the final flag, which of course needs us to get the root permissions. In the "robot" directory is also a file called: "password.raw-md5". If we cat it we get a name (robot) and a hash. We go to CrackStation to crack the hash and get the password: "abcdefghijklmnopqrstuvwxyz". We can try again to log to SSH with the new credentials and we succeed. Now we will try to find the files with SUID or SGID permissions to see if we find something interesting:
 
 ```bash
 find / -type f -perm /6000 2>/dev/null
 ```
 - And we find something interesting: "/usr/local/bin/nmap"
-- If we go to GTFOBins and search for a nmap SUID exploit, paste it in the terminal, we get the root permissions. 
+- If we go to GTFOBins, search for a nmap SUID exploit and paste it in the terminal, we get the root permissions. 
 
 ![alt text](Images/suid.png)
 
