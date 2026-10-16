@@ -6,7 +6,7 @@
 - **Objective:** Get root permissions
 
 ## 1. Reconnaissance
-As the task asks, we need to first scan the target machine. I used `nmap` with NSE Default Scripts and Service Version Detection:
+- First, we scan the target machine for open ports. I used nmap with NSE Default Scripts and Service Version Detection:
 ```bash
 nmap -sC -sV 10.113.172.33
 ```
