@@ -33,7 +33,7 @@ gobuster dir -u 10.112.131.30 -w /usr/share/wordlists/dirbuster/directory-list-2
 
 - An image like this isn't put there without a reason, it has to hide something in it, which is why we'll search for an online steganography decoder and see if we find something useful. And we do find something interesting, a base64 encoded text.
 
-![alt text](Images/image.png)
+![alt text](Images/decoder.png)
 
 - If we copy the text and paste it in cyberchef with "From Base64" recipe and scroll to the bottom of the output we see: "charlie:$6$CZJnCPeQWp9/jpNx$khGlFdICJnr8R3JC/jTR2r7DrbFLp8zq8469d3c0.zuKN4se61FObwWGxcHZqO2RJHkkL1jjPYeeGyIJWE82X/" which most probably gives as a username (charlie) and a SHA512 Hash. Next step would be to see if we can crack that hash and find out the password. We'll try to crack it using John the Ripper.
 
